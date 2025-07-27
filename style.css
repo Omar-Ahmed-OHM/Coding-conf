@@ -1,0 +1,22 @@
+body{
+    font-family: Inconsolata, monospace;
+    background-image: url('/assets/images/background-desktop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+
+}
+.Secure{
+    font-weight: 500;
+    font-size: 15px;
+    color: #92959b; /* Gray-500 */
+}
+label{
+    font-size: 20px;
+}
+ .preview-img {
+max-height: 100%;
+max-width: 100%;
+object-fit: contain;
+}

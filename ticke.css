@@ -1,0 +1,31 @@
+body{
+    background-image: url('/assets/images/background-desktop.png');
+    font-family: Inconsolata, monospace;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.Secure{
+    font-weight: 500;
+    font-size: 15px;
+    color: #92959b; /* Gray-500 */
+}
+label{
+    font-size: 20px;
+}
+ .preview-img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+.ticket{
+    background-image: url('/assets/images/pattern-ticket.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.code{
+    transform: rotateZ(91.5deg);
+}
