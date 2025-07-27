@@ -9,25 +9,29 @@
 
     <link rel="stylesheet" href="./ticke.css">
 </head>
-<body class="relative min-h-screen flex items-center justify-center text-neutral-0 relative flex-col bg-neutral-900">
-    <div class="w-full absolute top-0 h-full z-10">
-  <img src="./assets/images/pattern-lines.svg" alt="line" srcset="" class="w-full absolute   ">
-</div>
+ <body class=" min-h-screen pt-10 p-4 sm:px-6  flex flex-col items-center justify-center  text-neutral-0 bg-neutral-900 relative">
+<img src="./assets/images/pattern-lines.svg"  class="w-full absolute top-0 h-full  z-10" alt="line" srcset="" >
+      <!-- Decorations -->
+    <img
+    src="./assets/images/pattern-squiggly-line-top.svg"
+    class="absolute w-52 top-16 right-0 max-w-full md:w-[500px] h-auto"
+    alt="pattern"
+  />
+  
+  <!-- Bottom Decoration (left on mobile, original on md+) -->
   <img
-  src="./assets/images/pattern-squiggly-line-top.svg"
-  class="absolute w-52 top-16 right-0 max-w-full md:w-[500px] h-auto"
-  alt="pattern"
-/>
-<img
-  src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
-  class="absolute bottom-0 w-52  left-0 md:left-[420px] md:bottom-32 md:w-[900px] z-0 h-auto"
-  alt="pattern"
-/>
-<img
-  src="./assets/images/pattern-circle.svg"
-  class="absolute top-24 w-52  right-[20px] md:right-[650px] md:top-[400px] md:w-[200px] z-0 h-auto"
-  alt="pattern"
-/>
+    src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+    class="absolute bottom-0 w-52  left-0 md:left-[0px] md:top-[320px] md:w-[900px] z-0 h-auto"
+    alt="pattern"
+  />
+  
+  
+  <img
+    src="./assets/images/pattern-circle.svg"
+    class="absolute top-24 w-52  right-[20px] md:right-[0px] md:top-[400px] md:w-[200px] z-0 h-auto"
+    alt="pattern"
+  />
+
  <div class="w-full max-w-xl sm:max-w-2xl md:max-w-3xl z-10 main">
       <!-- Logo -->
       <div class="flex justify-center mb-10">
@@ -45,14 +49,15 @@
         </p>
       </h1>
       <p class="text-center text-sm sm:text-base text-neutral-300 mb-8">
-        Secure your spot at next year's biggest coding conference.
+               we,ve emailed your ticjet to <span class="text-red-500"> Jonatan@email.com </span><br> and  will send updates in the run up to event
+
       </p>
  </div>
- <div class="ticket relative flex flex-col md:p-10 md:pr-36 p-5 pr-24 rounded-md justify-center items-center h-full">
+ <div class="ticket relative flex flex-col gap-3 md:p-10 md:pr-36 p-5 pr-24 rounded-md justify-center items-center h-full">
 <div class="logo">
     <img src="./assets/images/logo-full.svg" alt="logo" >
 </div>
-<p class="text-gray-600">Jan 31,2025 / Austin, Tx</p>
+<p class="text-gray-600 pl-14 text-[12px]">Jan 31,2025 / Austin, Tx</p>
 <div class="person mt-2 flex gap-3 justify-center items-center ">
   <div>
     <img src="./assets/images/image-avatar.jpg" class=" w-[50px] h-[50px] rounded-md " alt="Person">
@@ -67,7 +72,7 @@
   </div>
 </div>
   <div class="absolute top-1/2 code right-[0px]">
-    <p class="text-gray-600 text-[22px] ">#01609</p>
+    <p class="text-gray-400 text-[22px] ">#01609</p>
   </div>
 </div>
 

@@ -38,31 +38,30 @@
       };
     </script>
   </head>
-  <body class="min-h-screen px-4 sm:px-6 py-10 flex items-center justify-center text-neutral-0 relative bg-neutral-900 relative">
-<div class="w-full absolute top-0 h-full z-10">
-  <img src="./assets/images/pattern-lines.svg" alt="line" srcset="" class="w-full absolute   ">
-</div>
-    <!-- Decorations -->
+  <body class="pt-14 p-4  sm:px-6 flex items-center justify-center text-neutral-0 bg-neutral-900 relative">
+   
+    
+    <img src="./assets/images/pattern-lines.svg"  class="w-full absolute top-0 h-full  z-10" alt="line" srcset="" >
+      <!-- Decorations -->
+    <img
+    src="./assets/images/pattern-squiggly-line-top.svg"
+    class="absolute w-52 top-16 right-0 max-w-full md:w-[500px] h-auto"
+    alt="pattern"
+  />
+  
+  <!-- Bottom Decoration (left on mobile, original on md+) -->
   <img
-  src="./assets/images/pattern-squiggly-line-top.svg"
-  class="absolute w-52 top-16 right-0 max-w-full md:w-[500px] h-auto"
-  alt="pattern"
-/>
-
-<!-- Bottom Decoration (left on mobile, original on md+) -->
-<img
-  src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
-  class="absolute bottom-0 w-52  left-0 md:left-[420px] md:bottom-32 md:w-[900px] z-0 h-auto"
-  alt="pattern"
-/>
-
-<img
-  src="./assets/images/pattern-circle.svg"
-  class="absolute top-24 w-52  right-[20px] md:right-[650px] md:top-[400px] md:w-[200px] z-0 h-auto"
-  alt="pattern"
-/>
-
-
+    src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+    class="absolute bottom-0 w-52  left-0 md:left-[0px] md:bottom-[-110px] md:w-[900px] z-0 h-auto"
+    alt="pattern"
+  />
+  
+  
+  <img
+    src="./assets/images/pattern-circle.svg"
+    class="absolute top-24 w-52  right-[20px] md:right-[0px] md:top-[400px] md:w-[200px] z-0 h-auto"
+    alt="pattern"
+  />
     <!-- Main Container -->
     <div class="w-full max-w-xl sm:max-w-2xl md:max-w-3xl z-10 main">
       <!-- Logo -->
@@ -81,28 +80,52 @@
       <!-- Form -->
       <form id="ticket-form" class="space-y-6" novalidate>
         <!-- Upload Avatar -->
-        <div>
-          <label class="block font-semibold text-neutral-300 mb-2 text-base sm:text-lg">Upload Avatar</label>
-          <label for="avatar-upload"
-            class="relative bg-white/5 flex flex-col items-center justify-center h-40 sm:h-44 border-2 border-dashed border-neutral-500 rounded-xl cursor-pointer bg-opacity-50 overflow-hidden transition hover:border-orange-500">
-            <img id="preview" alt="preview" class="preview-img absolute top-0 left-0 w-full h-full object-cover hidden" />
-            <div id="upload-placeholder" class="flex flex-col items-center text-sm text-neutral-300 z-10">
-              <img src="./assets/images/icon-upload.svg" class="w-6 h-6 mb-2" alt="Upload icon" />
-              <p class="text-center">Click to upload<br>
-                <span class="text-xs text-neutral-500">Drag and Drop Click to upload</span>
-              </p>
-            </div>
-            <input type="file" id="avatar-upload" accept="image/png, image/jpeg"
-              class="absolute inset-0 opacity-0 cursor-pointer"  />
-            </label>
-            <p id="avatar-error" class="text-red-500 text-sm mt-1 hidden">Avatar image is required.</p>
-        </div>
+      <!-- Upload Avatar -->
+<div>
+  <label class="block font-semibold text-neutral-300 mb-2 text-base sm:text-lg">Upload Avatar</label>
+
+  <div
+    class="relative bg-white/5 flex flex-col items-center justify-center h-auto p-4 w-full sm:h-auto border-2 border-dashed border-neutral-500 rounded-xl bg-opacity-50 overflow-hidden transition hover:border-white text-center">
+
+    <!-- Preview Image & Buttons -->
+    <div id="image-preview-wrapper" class="flex flex-col items-center gap-4 hidden">
+      <img id="preview" alt="preview"
+        class="w-28 h-28 object-cover rounded-full border-2 border-white shadow-md" />
+
+      <div class="flex gap-4">
+        <button type="button" id="change-avatar"
+          class="px-4 py-2 text-sm rounded bg-white/20 text-white backdrop-blur hover:bg-white/30 transition">
+          Change
+        </button>
+        <button type="button" id="remove-avatar"
+          class="px-4 py-2 text-sm rounded bg-red-600 text-white hover:bg-red-700 transition">
+          Remove
+        </button>
+      </div>
+    </div>
+
+    <!-- Placeholder before upload -->
+    <div id="upload-placeholder" class="flex flex-col items-center text-sm text-neutral-300 z-10">
+      <img src="./assets/images/icon-upload.svg" class="w-6 h-6 mb-2" alt="Upload icon" />
+      <p>Click to upload<br>
+        <span class="text-xs text-neutral-500">Drag and drop or click to upload</span>
+      </p>
+    </div>
+
+    <!-- File Input -->
+    <input type="file" id="avatar-upload" accept="image/png, image/jpeg"
+      class="absolute inset-0 opacity-0 cursor-pointer" />
+  </div>
+
+  <p id="avatar-error" class="text-red-500 text-sm mt-1 hidden">Avatar image is required.</p>
+  <p class="text-gray-400 text-[15px] mt-1">Upload your photo (JPG or PNG, max size: 500kb)</p>
+</div>
 
         <!-- Full Name -->
         <div>
           <label for="name" class="block font-semibold text-neutral-0 mb-1">Full Name</label>
           <input type="text" id="name" placeholder="John Doe"
-            class="w-full bg-white/5 p-3 border border-neutral-500 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
+            class="w-full bg-white/5 p-3 border border-neutral-500   text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white"  />
           <p id="name-error" class="text-red-500 text-sm mt-1 hidden">Full name is required.</p>
         </div>
 
@@ -110,7 +133,7 @@
         <div>
           <label for="email" class="block font-semibold text-neutral-0 mb-1">Email Address</label>
           <input type="email" id="email" placeholder="example@email.com"
-            class="w-full bg-white/5 p-3 border border-neutral-500 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
+            class="w-full bg-white/5 p-3 border border-neutral-500 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white" />
           <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Email is required.</p>
         </div>
 
@@ -118,22 +141,23 @@
         <div>
           <label for="github" class="block font-semibold text-neutral-0 mb-1">GitHub Username</label>
           <input type="text" id="github" placeholder="@yourusername"
-            class="w-full p-3 bg-white/5 border border-neutral-500 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" />
+            class="w-full p-3 bg-white/5 border border-neutral-500 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white" />
           <p id="github-error" class="text-red-500 text-sm mt-1 hidden">GitHub username is required.</p>
         </div>
 
         <!-- Button -->
-        <a href="./ticket.html"
+        <button type="submit"
           class="w-full bg-orange-500 text-darkblue text-sm font-bold py-3 rounded-lg shadow-md hover:bg-orange-700 transition">
-          >
+          <a href="./ticket.html">
 
             Generate My Ticket
           </a>
+        </button>
       </form>
     </div>
 
     <!-- Validation Script -->
-   <script>
+<script>
   const form = document.getElementById('ticket-form');
 
   form.addEventListener('submit', function (e) {
@@ -185,6 +209,44 @@
       form.submit(); // Submit if all fields are valid
     }
   });
+
+  // ----------------------------
+  // Avatar Preview + Buttons Logic
+  // ----------------------------
+  const avatarInput = document.getElementById('avatar-upload');
+  const previewImg = document.getElementById('preview');
+  const previewWrapper = document.getElementById('image-preview-wrapper');
+  const uploadPlaceholder = document.getElementById('upload-placeholder');
+  const removeBtn = document.getElementById('remove-avatar');
+  const changeBtn = document.getElementById('change-avatar');
+
+  // Show image preview when uploaded
+  avatarInput.addEventListener('change', function () {
+    const file = avatarInput.files[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        previewImg.src = e.target.result;
+        previewWrapper.classList.remove('hidden');
+        uploadPlaceholder.classList.add('hidden');
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Remove image
+  removeBtn.addEventListener('click', () => {
+    avatarInput.value = '';
+    previewImg.src = '';
+    previewWrapper.classList.add('hidden');
+    uploadPlaceholder.classList.remove('hidden');
+  });
+
+  // Change image
+  changeBtn.addEventListener('click', () => {
+    avatarInput.click();
+  });
 </script>
+
   </body>
 </html>

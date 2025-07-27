@@ -4,7 +4,8 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+ margin: 0;
+  padding: 0;
 }
 .Secure{
     font-weight: 500;
@@ -19,13 +20,20 @@ label{
       max-width: 100%;
       object-fit: contain;
     }
-.ticket{
-    background-image: url('/assets/images/pattern-ticket.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
+.ticket {
+  background-image: url('./assets/images/pattern-ticket.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
+/* مخصص للموبايل */
+@media (max-width: 640px) {
+  .ticket {
+    background-size: cover; /* تجعل الصورة تناسب حجم العنصر */
+  }
+}
+
 .code{
     transform: rotateZ(91.5deg);
 }
